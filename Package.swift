@@ -23,6 +23,6 @@ let package = Package(
             dependencies: ["Promises"]),
         .testTarget(
             name: "TinyduxTests",
-            dependencies: ["Tinydux", "Promises"]),
+            dependencies: ["Tinydux"]),
     ]
 )
