@@ -1,2 +1,2 @@
-# TinyDux
+# Tinydux
 State management with Promise
