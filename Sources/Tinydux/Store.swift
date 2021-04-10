@@ -8,7 +8,8 @@
 import Foundation
 import Promises
 
-open class Store<S: State> {
+@available(iOS 13.0, *)
+open class Store<S: State>: ObservableObject {
     public private(set) var state: S
         
     public init(state: S = S()) {
