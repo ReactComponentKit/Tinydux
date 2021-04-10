@@ -10,6 +10,7 @@ import Promises
 
 @dynamicMemberLookup
 open class Store<S: State> {
+    @Published
     public private(set) var state: S
         
     public init(state: S = S()) {
