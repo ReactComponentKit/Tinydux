@@ -8,4 +8,4 @@
 import Foundation
 import Promises
 
-public typealias Job<S: State, A: Action> = (S, A) -> Promise<S>
+public typealias Job<S: State, A: Action> = (A, @escaping Context<S>) -> Promise<S>

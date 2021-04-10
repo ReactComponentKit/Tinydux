@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		4E7286752621BFA900298CDF /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7286742621BFA900298CDF /* Context.swift */; };
 		4EE416CD262087D8009F6317 /* PromisesTestHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE416CC262087D8009F6317 /* PromisesTestHelpers */; };
 		4EE416CF262087D8009F6317 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE416CE262087D8009F6317 /* Promises */; };
 		4EE416D1262087D8009F6317 /* FBLPromises in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE416D0262087D8009F6317 /* FBLPromises */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E7286742621BFA900298CDF /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		4EE416E826209286009F6317 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		4EE416F3262095C6009F6317 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		4EE416F92620A122009F6317 /* StoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreError.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				4EE416F92620A122009F6317 /* StoreError.swift */,
 				OBJ_11 /* State.swift */,
 				OBJ_12 /* Store.swift */,
+				4E7286742621BFA900298CDF /* Context.swift */,
 			);
 			name = Tinydux;
 			path = Sources/Tinydux;
@@ -265,6 +268,7 @@
 				OBJ_29 /* Job.swift in Sources */,
 				4EE416F4262095C6009F6317 /* Counter.swift in Sources */,
 				OBJ_30 /* State.swift in Sources */,
+				4E7286752621BFA900298CDF /* Context.swift in Sources */,
 				4EE416E926209286009F6317 /* Action.swift in Sources */,
 				OBJ_31 /* Store.swift in Sources */,
 			);

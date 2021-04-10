@@ -9,8 +9,13 @@ final class CounterStoreTests: XCTestCase {
     }
     
     func testIncrement() {
+        let expectation = XCTestExpectation(description: "testIncrement")
         let store = CounterStore()
         store.increment()
+            .then { _ in
+                expectation.fulfill()
+            }
+        wait(for: [expectation], timeout: 5)
         XCTAssertEqual(store.state.count, 1)
     }
     
@@ -32,6 +37,9 @@ final class CounterStoreTests: XCTestCase {
         let store = CounterStore()
         store.asyncIncrement3x(value: 1)
             .then { _ in
+                expectation.fulfill()
+            }
+            .catch { _ in
                 expectation.fulfill()
             }
         

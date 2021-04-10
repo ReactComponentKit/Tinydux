@@ -17,56 +17,46 @@ struct CounterState: State {
 }
 
 @available(iOS 13.0, *)
-class CounterStore: Store<CounterState> {
-
-    @Published
-    var count: Int = 0
-    
-    func increment() {
+class CounterStore: Store<CounterState>, ObservableObject {
+    func increment() -> Promise<CounterState> {
         withState {
             $0.count += 1
         }
     }
     
     func asyncIncrement(value: Int = 1) -> Promise<CounterState> {
-        async { state, resolve, reject in
+        async { context, resolve, reject in
+            guard let store = context() else { return reject(StoreError.invalidPromiseLife) }
             Thread.sleep(forTimeInterval: 1)
-            resolve(state.copy { (mutation) in
+            resolve(store.state.copy { (mutation) in
                 mutation.count += value
             })
-        }
-        .then {
-            self.count = $0.count
         }
     }
     
     func asyncIncrement3x(value: Int) -> Promise<CounterState> {
         flow(action: CounterAction.increment(value), [
-            { state, _ in
-                return Promise { resolve, _ in
-                    Thread.sleep(forTimeInterval: 3)
-                    resolve(state)
-                }
-            },
+            sleep,
             inc1,
             inc1,
             inc1,
-            { state, _ in
-                return Promise { resolve, _ in
-                    Thread.sleep(forTimeInterval: 3)
-                    resolve(state)
-                }
-            },
+            sleep
         ])
-        .then {
-            self.count = $0.count
-        }
     }
 }
 
-func inc1(state: CounterState, action: CounterAction) -> Promise<CounterState> {
-    Promise { resolve, _ in
-        resolve(state.copy({ (mutation) in
+func sleep(action: CounterAction, context: @escaping Context<CounterState>) -> Promise<CounterState> {
+    Promise { resolve, reject in
+        guard let store = context() else { return reject(StoreError.invalidPromiseLife) }
+        Thread.sleep(forTimeInterval: 3)
+        resolve(store.state)
+    }
+}
+
+func inc1(action: CounterAction, context: @escaping Context<CounterState>) -> Promise<CounterState> {
+    Promise { resolve, reject in
+        guard let store = context() else { return reject(StoreError.invalidPromiseLife) }
+        resolve(store.state.copy({ (mutation) in
             switch action {
             case .increment(let value):
                 mutation.count += value

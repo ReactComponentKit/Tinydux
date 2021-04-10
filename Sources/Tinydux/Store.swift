@@ -8,51 +8,75 @@
 import Foundation
 import Promises
 
-@available(iOS 13.0, *)
-open class Store<S: State>: ObservableObject {
+@dynamicMemberLookup
+open class Store<S: State> {
     public private(set) var state: S
         
     public init(state: S = S()) {
         self.state = state
     }
     
-    @discardableResult
-    public func withState(_ mutation: (inout S) -> Void) -> S{
-        mutation(&state)
-        return state
+    public subscript<T>(dynamicMember keyPath: KeyPath<S, T>) -> T {
+        return state[keyPath: keyPath]
     }
     
-    public func async(on queue: DispatchQueue = .global(), _ work: @escaping (S, @escaping (S) -> Void, @escaping (Error) -> Void) throws -> Void) -> Promise<S> {
+    @discardableResult
+    public func withState(_ mutation: @escaping (inout S) -> Void) -> Promise<S> {
+        Promise<S>(on: .main) { [weak self] resolve, reject in
+            if var state = self?.state {
+                mutation(&state)
+                resolve(state)
+            } else {
+                reject(StoreError.invalidPromiseLife)
+            }
+        }
+        .then(on: .main) {
+            self.state = $0
+        }
+    }
+    
+    private func handleContext() -> Store<S>? {
+        return self
+    }
+    
+    @discardableResult
+    public func async(on queue: DispatchQueue = .global(), _ work: @escaping (@escaping Context<S> , @escaping (S) -> Void, @escaping (Error) -> Void) throws -> Void) -> Promise<S> {
         return Promise<S>(on: queue) { [weak self] resolve, reject in
             do {
-                guard let s = self?.state else {
-                    reject(StoreError.invalidPromiseLife)
-                    return
+                guard let strongSelf = self else {
+                    return reject(StoreError.invalidPromiseLife)
                 }
-                try work(s, resolve, reject)
+                try work(strongSelf.handleContext, resolve, reject)
             } catch {
                 throw error
             }
         }
-        .then { [weak self] in
-            self?.state = $0
+        .then(on: .main) {
+            self.state = $0
         }
     }
-    
+
+    @discardableResult
     public func flow<A: Action>(action: A, _ jobs: [Job<S, A>]) -> Promise<S> {
-        async(on: .global()) { state, resolve, reject in
+        async(on: .global()) { [weak self] context, resolve, reject in
             do {
-                var mutableState = state
                 for job in jobs {
-                    mutableState = try await(job(mutableState, action))
+                    guard let strongSelf = self else {
+                        return reject(StoreError.invalidPromiseLife)
+                    }
+                    let newState = try await(job(action, context))
+                    _ = try await(strongSelf.withState({ (mutation) in
+                        mutation = newState
+                    }))
                 }
-                resolve(mutableState)
-            } catch {
-                if let err = error as? StoreError, err == StoreError.invalidPromiseLife {
+                
+                if let state = self?.state {
                     resolve(state)
                 } else {
-
+                    reject(StoreError.invalidPromiseLife)
                 }
+            } catch {
+                reject(StoreError.invalidPromiseLife)
             }
         }
     }
