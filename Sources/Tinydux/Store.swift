@@ -49,7 +49,7 @@ open class Store<S: State> {
                 }
                 try work(strongSelf.handleContext, resolve, reject)
             } catch {
-                throw error
+                reject(error)
             }
         }
         .then(on: .main) {
@@ -77,7 +77,7 @@ open class Store<S: State> {
                     reject(StoreError.invalidPromiseLife)
                 }
             } catch {
-                reject(StoreError.invalidPromiseLife)
+                reject(error)
             }
         }
     }
