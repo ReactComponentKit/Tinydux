@@ -15,6 +15,10 @@ open class Store<S: State> {
         
     public init(state: S = S()) {
         self.state = state
+        prepareStore()
+    }
+    
+    open func prepareStore() {
     }
     
     public subscript<T>(dynamicMember keyPath: KeyPath<S, T>) -> T {
