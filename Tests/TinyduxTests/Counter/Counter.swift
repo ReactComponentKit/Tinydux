@@ -6,61 +6,58 @@
 //
 
 import Foundation
+import Tinydux
 import Promises
+import Combine
 
-enum CounterAction: Action {
-    case increment(Int)
-}
-
-struct CounterState: State {
+struct Counter: State {
     var count: Int = 0
 }
 
 @available(iOS 13.0, *)
-class CounterStore: Store<CounterState>, ObservableObject {
-    func increment() -> Promise<CounterState> {
-        withState {
-            $0.count += 1
+class CounterStore: Store<Counter> {
+    init() {
+        super.init(state: Counter())
+    }
+    
+    @Published
+    var count = 0
+    
+    override func computed(new: Counter, old: Counter) {
+        self.count = new.count
+    }
+    
+    // mutation
+    private func INCREMENT(counter: inout Counter, payload: Int) {
+        counter.count += payload
+    }
+    
+    private func DECREMENT(counter: inout Counter, payload: Int) {
+        counter.count -= payload
+    }
+    
+    // actions
+    func incrementAction(payload: Int) {
+        commit(mutation: INCREMENT, payload: payload)
+    }
+    
+    func decrementAction(payload: Int) {
+        commit(mutation: DECREMENT, payload: payload)
+    }
+    
+    func asyncIncrementAction(payload: Int) -> Promise<Counter> {
+        asyncTask { [weak self] in
+            guard let self = self else { return }
+            _ = try awaitPromise(Sleep(1))
+            self.commit(mutation: self.INCREMENT, payload: payload)
         }
     }
     
-    func asyncIncrement(value: Int = 1) -> Promise<CounterState> {
-        async { context, resolve, reject in
-            guard let store = context() else { return reject(StoreError.invalidPromiseLife) }
-            Thread.sleep(forTimeInterval: 1)
-            resolve(store.state.copy { (mutation) in
-                mutation.count += value
-            })
+    func asyncDecrementAction(payload: Int) -> Promise<Counter> {
+        asyncTask { [weak self] in
+            guard let self = self else { return }
+            _ = try awaitPromise(Sleep(1))
+            self.commit(mutation: self.DECREMENT, payload: payload)
         }
-    }
-    
-    func asyncIncrement3x(value: Int) -> Promise<CounterState> {
-        flow(action: CounterAction.increment(value), [
-            sleep,
-            inc1,
-            inc1,
-            inc1,
-            sleep
-        ])
-    }
-}
-
-func sleep(action: CounterAction, context: @escaping Context<CounterState>) -> Promise<CounterState> {
-    Promise { resolve, reject in
-        guard let store = context() else { return reject(StoreError.invalidPromiseLife) }
-        Thread.sleep(forTimeInterval: 3)
-        resolve(store.state)
-    }
-}
-
-func inc1(action: CounterAction, context: @escaping Context<CounterState>) -> Promise<CounterState> {
-    Promise { resolve, reject in
-        guard let store = context() else { return reject(StoreError.invalidPromiseLife) }
-        resolve(store.state.copy({ (mutation) in
-            switch action {
-            case .increment(let value):
-                mutation.count += value
-            }
-        }))
     }
 }

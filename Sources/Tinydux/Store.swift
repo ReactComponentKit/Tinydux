@@ -8,78 +8,90 @@
 import Foundation
 import Promises
 
-@dynamicMemberLookup
-open class Store<S: State> {
-    @Published
+open class Store<S: State>: ObservableObject {
     public private(set) var state: S
-        
-    public init(state: S = S()) {
+    private var workListBeforeCommit: [(inout S) -> Void] = []
+    private var workListAfterCommit: [(inout S) -> Void] = []
+    
+    public init(state: S) {
         self.state = state
-        prepareStore()
     }
     
-    open func prepareStore() {
+    open func worksBeforeCommit() -> [(inout S) -> Void] {
+            return []
+        }
+        
+    open func worksAfterCommit() -> [(inout S) -> Void] {
+        return []
     }
     
-    public subscript<T>(dynamicMember keyPath: KeyPath<S, T>) -> T {
-        return state[keyPath: keyPath]
-    }
-    
-    @discardableResult
-    public func withState(_ mutation: @escaping (inout S) -> Void) -> Promise<S> {
-        Promise<S>(on: .main) { [weak self] resolve, reject in
-            if var state = self?.state {
-                mutation(&state)
-                resolve(state)
-            } else {
-                reject(StoreError.invalidPromiseLife)
+    private func doWorksBeforeCommit() {
+        if workListBeforeCommit.isEmpty {
+            let works = worksBeforeCommit()
+            if works.isEmpty {
+                return
             }
+            workListBeforeCommit = works
         }
-        .then(on: .main) {
-            self.state = $0
+        for work in workListBeforeCommit {
+            work(&self.state)
         }
     }
     
-    private func handleContext() -> Store<S>? {
-        return self
-    }
-    
-    @discardableResult
-    public func async(on queue: DispatchQueue = .global(), _ work: @escaping (@escaping Context<S> , @escaping (S) -> Void, @escaping (Error) -> Void) throws -> Void) -> Promise<S> {
-        return Promise<S>(on: queue) { [weak self] resolve, reject in
-            do {
-                guard let strongSelf = self else {
-                    return reject(StoreError.invalidPromiseLife)
-                }
-                try work(strongSelf.handleContext, resolve, reject)
-            } catch {
-                reject(error)
+    private func doWorksAfterCommit() {
+        if workListAfterCommit.isEmpty {
+            let works = worksAfterCommit()
+            if works.isEmpty {
+                return
             }
+            workListAfterCommit = works
         }
-        .then(on: .main) {
-            self.state = $0
+        for work in workListAfterCommit {
+            work(&self.state)
         }
     }
-
-    @discardableResult
-    public func flow<A: Action>(action: A, _ jobs: [Job<S, A>]) -> Promise<S> {
-        async(on: .global()) { [weak self] context, resolve, reject in
-            do {
-                for job in jobs {
-                    guard let strongSelf = self else {
-                        return reject(StoreError.invalidPromiseLife)
-                    }
-                    let newState = try await(job(action, context))
-                    _ = try await(strongSelf.withState({ (mutation) in
-                        mutation = newState
-                    }))
-                }
+    
+    private func computeOnMainThread(new: S, old: S) {
+        if new != old {
+            computed(new: new, old: old)
+        }
+        // when doing works after commit mutation, computed value should be equal to state value.
+        doWorksAfterCommit()
+    }
+    
+    public func commit<P>(mutation: (inout S, P) -> Void, payload: P) {
+        doWorksBeforeCommit()
+        let old = state
+        mutation(&state, payload)
+        Promise<S>(on: .main) { [weak self] resolve, _ in
+            guard let self = self else { return }
+            self.computeOnMainThread(new: self.state, old: old)
+            resolve(self.state)
+        }
+        .then {  _ in }
+    }
+    
+    public func dispatch<P>(action: (Store<S>, P) -> Promise<S>, payload: P) {
+        action(self, payload)
+            .then(on: .main) { mutated in
                 
-                if let state = self?.state {
-                    resolve(state)
-                } else {
-                    reject(StoreError.invalidPromiseLife)
-                }
+            }
+    }
+    
+    public func dispatch<P>(action: (Store<S>, P) -> Void, payload: P) {
+        action(self, payload)
+    }
+    
+    open func computed(new: S, old: S) {
+        // override it
+    }
+    
+    public func asyncTask(_ job: @escaping () throws -> Void) -> Promise<S> {
+        return Promise<S> { [weak self] resolve, reject in
+            guard let self = self else { return }
+            do {
+                try job()
+                resolve(self.state)
             } catch {
                 reject(error)
             }
