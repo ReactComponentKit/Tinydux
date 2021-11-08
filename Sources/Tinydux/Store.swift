@@ -73,9 +73,7 @@ open class Store<S: State>: ObservableObject {
     
     public func dispatch<P>(action: (Store<S>, P) -> Promise<S>, payload: P) {
         action(self, payload)
-            .then(on: .main) { mutated in
-                
-            }
+            .then(on: .main) { _ in }
     }
     
     public func dispatch<P>(action: (Store<S>, P) -> Void, payload: P) {
@@ -87,7 +85,7 @@ open class Store<S: State>: ObservableObject {
     }
     
     public func asyncTask(_ job: @escaping () throws -> Void) -> Promise<S> {
-        return Promise<S> { [weak self] resolve, reject in
+        return Promise<S>(on: .global()) { [weak self] resolve, reject in
             guard let self = self else { return }
             do {
                 try job()
