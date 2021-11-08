@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		4ED954832739345400B8148A /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED954822739345400B8148A /* Sleep.swift */; };
+		4ED9548627394DE800B8148A /* PromiseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9548527394DE800B8148A /* PromiseExtensions.swift */; };
 		OBJ_102 /* FBLPromise+All.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* FBLPromise+All.m */; };
 		OBJ_103 /* FBLPromise+Always.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* FBLPromise+Always.m */; };
 		OBJ_104 /* FBLPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* FBLPromise+Any.m */; };
@@ -129,6 +130,7 @@
 
 /* Begin PBXFileReference section */
 		4ED954822739345400B8148A /* Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep.swift; sourceTree = "<group>"; };
+		4ED9548527394DE800B8148A /* PromiseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseExtensions.swift; sourceTree = "<group>"; };
 		OBJ_13 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		OBJ_19 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
@@ -355,7 +357,7 @@
 			path = include;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -366,7 +368,6 @@
 				OBJ_95 /* LICENSE */,
 				OBJ_96 /* README.md */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_67 /* FBLPromisesTestHelpers */ = {
@@ -417,6 +418,7 @@
 			children = (
 				OBJ_13 /* State.swift */,
 				OBJ_14 /* Store.swift */,
+				4ED9548527394DE800B8148A /* PromiseExtensions.swift */,
 			);
 			name = Tinydux;
 			path = Sources/Tinydux;
@@ -558,7 +560,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -641,6 +643,7 @@
 			files = (
 				OBJ_164 /* State.swift in Sources */,
 				OBJ_165 /* Store.swift in Sources */,
+				4ED9548627394DE800B8148A /* PromiseExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
