@@ -23,6 +23,11 @@
 /* Begin PBXBuildFile section */
 		4ED954832739345400B8148A /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED954822739345400B8148A /* Sleep.swift */; };
 		4ED9548627394DE800B8148A /* PromiseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9548527394DE800B8148A /* PromiseExtensions.swift */; };
+		4EECE957279281F5007A2D55 /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE956279281EA007A2D55 /* CounterStore.swift */; };
+		4EECE95927928225007A2D55 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE95827928225007A2D55 /* UserStore.swift */; };
+		4EECE95B2792847A007A2D55 /* TinyduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE95A2792847A007A2D55 /* TinyduxTests.swift */; };
+		4EECE95D27928544007A2D55 /* ContextSwitching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE95C27928544007A2D55 /* ContextSwitching.swift */; };
+		4EECE95F27928A71007A2D55 /* UserStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE95E27928A71007A2D55 /* UserStoreTests.swift */; };
 		OBJ_102 /* FBLPromise+All.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* FBLPromise+All.m */; };
 		OBJ_103 /* FBLPromise+Always.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* FBLPromise+Always.m */; };
 		OBJ_104 /* FBLPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* FBLPromise+Any.m */; };
@@ -68,8 +73,7 @@
 		OBJ_168 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Promises::Promises::Product" /* Promises.framework */; };
 		OBJ_169 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Promises::FBLPromises::Product" /* FBLPromises.framework */; };
 		OBJ_177 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_188 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* Counter.swift */; };
-		OBJ_189 /* TinyduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* TinyduxTests.swift */; };
+		OBJ_189 /* CounterStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* CounterStoreTests.swift */; };
 		OBJ_190 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* XCTestManifests.swift */; };
 		OBJ_192 /* Tinydux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tinydux::Tinydux::Product" /* Tinydux.framework */; };
 		OBJ_193 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Promises::Promises::Product" /* Promises.framework */; };
@@ -131,10 +135,14 @@
 /* Begin PBXFileReference section */
 		4ED954822739345400B8148A /* Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep.swift; sourceTree = "<group>"; };
 		4ED9548527394DE800B8148A /* PromiseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseExtensions.swift; sourceTree = "<group>"; };
+		4EECE956279281EA007A2D55 /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
+		4EECE95827928225007A2D55 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		4EECE95A2792847A007A2D55 /* TinyduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyduxTests.swift; sourceTree = "<group>"; };
+		4EECE95C27928544007A2D55 /* ContextSwitching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextSwitching.swift; sourceTree = "<group>"; };
+		4EECE95E27928A71007A2D55 /* UserStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoreTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		OBJ_14 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		OBJ_19 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
-		OBJ_20 /* TinyduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyduxTests.swift; sourceTree = "<group>"; };
+		OBJ_20 /* CounterStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStoreTests.swift; sourceTree = "<group>"; };
 		OBJ_21 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_25 /* FBLPromise+All.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+All.m"; sourceTree = "<group>"; };
 		OBJ_26 /* FBLPromise+Always.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Always.m"; sourceTree = "<group>"; };
@@ -252,9 +260,20 @@
 			path = Sleep;
 			sourceTree = "<group>";
 		};
+		4EECE955279281EA007A2D55 /* MockStore */ = {
+			isa = PBXGroup;
+			children = (
+				4EECE956279281EA007A2D55 /* CounterStore.swift */,
+				4EECE95827928225007A2D55 /* UserStore.swift */,
+			);
+			name = MockStore;
+			path = Tests/MockStore;
+			sourceTree = "<group>";
+		};
 		OBJ_16 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				4EECE955279281EA007A2D55 /* MockStore */,
 				OBJ_17 /* TinyduxTests */,
 			);
 			name = Tests;
@@ -264,21 +283,15 @@
 			isa = PBXGroup;
 			children = (
 				4ED954842739345F00B8148A /* Sleep */,
-				OBJ_18 /* Counter */,
-				OBJ_20 /* TinyduxTests.swift */,
+				OBJ_20 /* CounterStoreTests.swift */,
+				4EECE95A2792847A007A2D55 /* TinyduxTests.swift */,
+				4EECE95E27928A71007A2D55 /* UserStoreTests.swift */,
+				4EECE95C27928544007A2D55 /* ContextSwitching.swift */,
 				OBJ_21 /* XCTestManifests.swift */,
 			);
 			name = TinyduxTests;
 			path = Tests/TinyduxTests;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_18 /* Counter */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_19 /* Counter.swift */,
-			);
-			path = Counter;
-			sourceTree = "<group>";
 		};
 		OBJ_22 /* Dependencies */ = {
 			isa = PBXGroup;
@@ -659,9 +672,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_188 /* Counter.swift in Sources */,
-				OBJ_189 /* TinyduxTests.swift in Sources */,
+				OBJ_189 /* CounterStoreTests.swift in Sources */,
+				4EECE95927928225007A2D55 /* UserStore.swift in Sources */,
 				OBJ_190 /* XCTestManifests.swift in Sources */,
+				4EECE95B2792847A007A2D55 /* TinyduxTests.swift in Sources */,
+				4EECE95D27928544007A2D55 /* ContextSwitching.swift in Sources */,
+				4EECE957279281F5007A2D55 /* CounterStore.swift in Sources */,
+				4EECE95F27928A71007A2D55 /* UserStoreTests.swift in Sources */,
 				4ED954832739345400B8148A /* Sleep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

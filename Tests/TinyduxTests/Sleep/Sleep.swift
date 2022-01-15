@@ -8,9 +8,8 @@
 import Foundation
 import Promises
 
-func Sleep(_ interval: TimeInterval) -> Promise<TimeInterval> {
-    Promise<TimeInterval>(on: .global()) { resolve, reject in
+func Sleep(_ interval: TimeInterval) -> Promise<Void> {
+    return Promise { () -> Void in
         Thread.sleep(forTimeInterval: interval)
-        resolve(interval)
     }
 }

@@ -70,15 +70,6 @@ open class Store<S: State>: ObservableObject {
         .then {  _ in }
     }
     
-    public func dispatch<P>(action: (Store<S>, P) -> Promise<S>, payload: P) {
-        action(self, payload)
-            .then(on: .main) { _ in }
-    }
-    
-    public func dispatch<P>(action: (Store<S>, P) -> Void, payload: P) {
-        action(self, payload)
-    }
-    
     open func computed(new: S, old: S) {
         // override it
     }
