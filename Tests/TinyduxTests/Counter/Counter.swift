@@ -14,7 +14,6 @@ struct Counter: State {
     var count: Int = 0
 }
 
-@available(iOS 13.0, *)
 class CounterStore: Store<Counter> {
     init() {
         super.init(state: Counter())
