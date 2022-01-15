@@ -3,17 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
 		"Tinydux::TinyduxPackageTests::ProductTarget" /* TinyduxPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_40 /* Build configuration list for PBXAggregateTarget "TinyduxPackageTests" */;
+			buildConfigurationList = OBJ_179 /* Build configuration list for PBXAggregateTarget "TinyduxPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_43 /* PBXTargetDependency */,
+				OBJ_182 /* PBXTargetDependency */,
 			);
 			name = TinyduxPackageTests;
 			productName = TinyduxPackageTests;
@@ -21,33 +21,109 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		4E7286752621BFA900298CDF /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7286742621BFA900298CDF /* Context.swift */; };
-		4EE416CD262087D8009F6317 /* PromisesTestHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE416CC262087D8009F6317 /* PromisesTestHelpers */; };
-		4EE416CF262087D8009F6317 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE416CE262087D8009F6317 /* Promises */; };
-		4EE416D1262087D8009F6317 /* FBLPromises in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE416D0262087D8009F6317 /* FBLPromises */; };
-		4EE416D3262087D8009F6317 /* FBLPromisesTestHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = 4EE416D2262087D8009F6317 /* FBLPromisesTestHelpers */; };
-		4EE416E926209286009F6317 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE416E826209286009F6317 /* Action.swift */; };
-		4EE416F4262095C6009F6317 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE416F3262095C6009F6317 /* Counter.swift */; };
-		4EE416FA2620A122009F6317 /* StoreError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE416F92620A122009F6317 /* StoreError.swift */; };
-		OBJ_28 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Async.swift */; };
-		OBJ_29 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* Job.swift */; };
-		OBJ_30 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* State.swift */; };
-		OBJ_31 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Store.swift */; };
-		OBJ_38 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_49 /* TinyduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* TinyduxTests.swift */; };
-		OBJ_50 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* XCTestManifests.swift */; };
-		OBJ_52 /* Tinydux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tinydux::Tinydux::Product" /* Tinydux.framework */; };
+		4ED954832739345400B8148A /* Sleep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED954822739345400B8148A /* Sleep.swift */; };
+		4ED9548627394DE800B8148A /* PromiseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9548527394DE800B8148A /* PromiseExtensions.swift */; };
+		4EECE957279281F5007A2D55 /* CounterStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE956279281EA007A2D55 /* CounterStore.swift */; };
+		4EECE95927928225007A2D55 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE95827928225007A2D55 /* UserStore.swift */; };
+		4EECE95B2792847A007A2D55 /* TinyduxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE95A2792847A007A2D55 /* TinyduxTests.swift */; };
+		4EECE95D27928544007A2D55 /* ContextSwitching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE95C27928544007A2D55 /* ContextSwitching.swift */; };
+		4EECE95F27928A71007A2D55 /* UserStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EECE95E27928A71007A2D55 /* UserStoreTests.swift */; };
+		OBJ_102 /* FBLPromise+All.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* FBLPromise+All.m */; };
+		OBJ_103 /* FBLPromise+Always.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* FBLPromise+Always.m */; };
+		OBJ_104 /* FBLPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* FBLPromise+Any.m */; };
+		OBJ_105 /* FBLPromise+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* FBLPromise+Async.m */; };
+		OBJ_106 /* FBLPromise+Await.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* FBLPromise+Await.m */; };
+		OBJ_107 /* FBLPromise+Catch.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* FBLPromise+Catch.m */; };
+		OBJ_108 /* FBLPromise+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* FBLPromise+Delay.m */; };
+		OBJ_109 /* FBLPromise+Do.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* FBLPromise+Do.m */; };
+		OBJ_110 /* FBLPromise+Race.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* FBLPromise+Race.m */; };
+		OBJ_111 /* FBLPromise+Recover.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* FBLPromise+Recover.m */; };
+		OBJ_112 /* FBLPromise+Reduce.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* FBLPromise+Reduce.m */; };
+		OBJ_113 /* FBLPromise+Retry.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* FBLPromise+Retry.m */; };
+		OBJ_114 /* FBLPromise+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* FBLPromise+Testing.m */; };
+		OBJ_115 /* FBLPromise+Then.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* FBLPromise+Then.m */; };
+		OBJ_116 /* FBLPromise+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* FBLPromise+Timeout.m */; };
+		OBJ_117 /* FBLPromise+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* FBLPromise+Validate.m */; };
+		OBJ_118 /* FBLPromise+Wrap.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* FBLPromise+Wrap.m */; };
+		OBJ_119 /* FBLPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* FBLPromise.m */; };
+		OBJ_120 /* FBLPromiseError.m in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* FBLPromiseError.m */; };
+		OBJ_127 /* Promise+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Promise+All.swift */; };
+		OBJ_128 /* Promise+Always.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* Promise+Always.swift */; };
+		OBJ_129 /* Promise+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_71 /* Promise+Any.swift */; };
+		OBJ_130 /* Promise+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_72 /* Promise+Async.swift */; };
+		OBJ_131 /* Promise+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* Promise+Await.swift */; };
+		OBJ_132 /* Promise+Catch.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* Promise+Catch.swift */; };
+		OBJ_133 /* Promise+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* Promise+Delay.swift */; };
+		OBJ_134 /* Promise+Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* Promise+Do.swift */; };
+		OBJ_135 /* Promise+Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* Promise+Race.swift */; };
+		OBJ_136 /* Promise+Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_78 /* Promise+Recover.swift */; };
+		OBJ_137 /* Promise+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* Promise+Reduce.swift */; };
+		OBJ_138 /* Promise+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* Promise+Retry.swift */; };
+		OBJ_139 /* Promise+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_81 /* Promise+Testing.swift */; };
+		OBJ_140 /* Promise+Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_82 /* Promise+Then.swift */; };
+		OBJ_141 /* Promise+Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_83 /* Promise+Timeout.swift */; };
+		OBJ_142 /* Promise+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* Promise+Validate.swift */; };
+		OBJ_143 /* Promise+Wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* Promise+Wrap.swift */; };
+		OBJ_144 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_86 /* Promise.swift */; };
+		OBJ_145 /* PromiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* PromiseError.swift */; };
+		OBJ_147 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Promises::FBLPromises::Product" /* FBLPromises.framework */; };
+		OBJ_154 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_89 /* Package.swift */; };
+		OBJ_164 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* State.swift */; };
+		OBJ_165 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Store.swift */; };
+		OBJ_168 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Promises::Promises::Product" /* Promises.framework */; };
+		OBJ_169 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Promises::FBLPromises::Product" /* FBLPromises.framework */; };
+		OBJ_177 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_189 /* CounterStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* CounterStoreTests.swift */; };
+		OBJ_190 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* XCTestManifests.swift */; };
+		OBJ_192 /* Tinydux.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tinydux::Tinydux::Product" /* Tinydux.framework */; };
+		OBJ_193 /* Promises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Promises::Promises::Product" /* Promises.framework */; };
+		OBJ_194 /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Promises::FBLPromises::Product" /* FBLPromises.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4EE416BC262086BB009F6317 /* PBXContainerItemProxy */ = {
+		4ED9547B27392F7900B8148A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Promises::Promises";
+			remoteInfo = Promises;
+		};
+		4ED9547C27392F7900B8148A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Promises::FBLPromises";
+			remoteInfo = FBLPromises;
+		};
+		4ED9547D27392F7900B8148A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Promises::FBLPromises";
+			remoteInfo = FBLPromises;
+		};
+		4ED9547E27392F7900B8148A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tinydux::Tinydux";
 			remoteInfo = Tinydux;
 		};
-		4EE416BF262086BB009F6317 /* PBXContainerItemProxy */ = {
+		4ED9547F27392F7900B8148A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Promises::Promises";
+			remoteInfo = Promises;
+		};
+		4ED9548027392F7900B8148A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Promises::FBLPromises";
+			remoteInfo = FBLPromises;
+		};
+		4ED9548127392F7900B8148A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -57,95 +133,290 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E7286742621BFA900298CDF /* Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
-		4EE416E826209286009F6317 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		4EE416F3262095C6009F6317 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
-		4EE416F92620A122009F6317 /* StoreError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreError.swift; sourceTree = "<group>"; };
-		OBJ_10 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
-		OBJ_11 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
-		OBJ_12 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		OBJ_15 /* TinyduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyduxTests.swift; sourceTree = "<group>"; };
-		OBJ_16 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_20 /* Example */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Example; sourceTree = SOURCE_ROOT; };
-		OBJ_21 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		OBJ_22 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4ED954822739345400B8148A /* Sleep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sleep.swift; sourceTree = "<group>"; };
+		4ED9548527394DE800B8148A /* PromiseExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseExtensions.swift; sourceTree = "<group>"; };
+		4EECE956279281EA007A2D55 /* CounterStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStore.swift; sourceTree = "<group>"; };
+		4EECE95827928225007A2D55 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		4EECE95A2792847A007A2D55 /* TinyduxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyduxTests.swift; sourceTree = "<group>"; };
+		4EECE95C27928544007A2D55 /* ContextSwitching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextSwitching.swift; sourceTree = "<group>"; };
+		4EECE95E27928A71007A2D55 /* UserStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStoreTests.swift; sourceTree = "<group>"; };
+		OBJ_13 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		OBJ_20 /* CounterStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterStoreTests.swift; sourceTree = "<group>"; };
+		OBJ_21 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_25 /* FBLPromise+All.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+All.m"; sourceTree = "<group>"; };
+		OBJ_26 /* FBLPromise+Always.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Always.m"; sourceTree = "<group>"; };
+		OBJ_27 /* FBLPromise+Any.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Any.m"; sourceTree = "<group>"; };
+		OBJ_28 /* FBLPromise+Async.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Async.m"; sourceTree = "<group>"; };
+		OBJ_29 /* FBLPromise+Await.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Await.m"; sourceTree = "<group>"; };
+		OBJ_30 /* FBLPromise+Catch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Catch.m"; sourceTree = "<group>"; };
+		OBJ_31 /* FBLPromise+Delay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Delay.m"; sourceTree = "<group>"; };
+		OBJ_32 /* FBLPromise+Do.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Do.m"; sourceTree = "<group>"; };
+		OBJ_33 /* FBLPromise+Race.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Race.m"; sourceTree = "<group>"; };
+		OBJ_34 /* FBLPromise+Recover.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Recover.m"; sourceTree = "<group>"; };
+		OBJ_35 /* FBLPromise+Reduce.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Reduce.m"; sourceTree = "<group>"; };
+		OBJ_36 /* FBLPromise+Retry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Retry.m"; sourceTree = "<group>"; };
+		OBJ_37 /* FBLPromise+Testing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Testing.m"; sourceTree = "<group>"; };
+		OBJ_38 /* FBLPromise+Then.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Then.m"; sourceTree = "<group>"; };
+		OBJ_39 /* FBLPromise+Timeout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Timeout.m"; sourceTree = "<group>"; };
+		OBJ_40 /* FBLPromise+Validate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Validate.m"; sourceTree = "<group>"; };
+		OBJ_41 /* FBLPromise+Wrap.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "FBLPromise+Wrap.m"; sourceTree = "<group>"; };
+		OBJ_42 /* FBLPromise.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLPromise.m; sourceTree = "<group>"; };
+		OBJ_43 /* FBLPromiseError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBLPromiseError.m; sourceTree = "<group>"; };
+		OBJ_45 /* FBLPromise+Testing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Testing.h"; sourceTree = "<group>"; };
+		OBJ_46 /* FBLPromise+Reduce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Reduce.h"; sourceTree = "<group>"; };
+		OBJ_47 /* FBLPromise+Catch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Catch.h"; sourceTree = "<group>"; };
+		OBJ_48 /* FBLPromise+Recover.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Recover.h"; sourceTree = "<group>"; };
+		OBJ_49 /* FBLPromise+Validate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Validate.h"; sourceTree = "<group>"; };
+		OBJ_50 /* FBLPromise+All.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+All.h"; sourceTree = "<group>"; };
+		OBJ_51 /* FBLPromise+Race.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Race.h"; sourceTree = "<group>"; };
+		OBJ_52 /* FBLPromise+Wrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Wrap.h"; sourceTree = "<group>"; };
+		OBJ_53 /* FBLPromise.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLPromise.h; sourceTree = "<group>"; };
+		OBJ_54 /* FBLPromises.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLPromises.h; sourceTree = "<group>"; };
+		OBJ_55 /* FBLPromisePrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLPromisePrivate.h; sourceTree = "<group>"; };
+		OBJ_56 /* FBLPromise+Retry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Retry.h"; sourceTree = "<group>"; };
+		OBJ_57 /* FBLPromise+Await.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Await.h"; sourceTree = "<group>"; };
+		OBJ_58 /* FBLPromise+Delay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Delay.h"; sourceTree = "<group>"; };
+		OBJ_59 /* FBLPromise+Do.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Do.h"; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_9 /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
-		"Tinydux::Tinydux::Product" /* Tinydux.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Tinydux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_60 /* FBLPromise+Timeout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Timeout.h"; sourceTree = "<group>"; };
+		OBJ_61 /* FBLPromiseError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBLPromiseError.h; sourceTree = "<group>"; };
+		OBJ_62 /* FBLPromise+Then.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Then.h"; sourceTree = "<group>"; };
+		OBJ_63 /* FBLPromise+Async.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Async.h"; sourceTree = "<group>"; };
+		OBJ_64 /* FBLPromise+Always.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Always.h"; sourceTree = "<group>"; };
+		OBJ_65 /* FBLPromise+Any.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBLPromise+Any.h"; sourceTree = "<group>"; };
+		OBJ_66 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; name = module.modulemap; path = /Users/burt/github/ReactComponentKit/Tinydux/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap; sourceTree = "<group>"; };
+		OBJ_69 /* Promise+All.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+All.swift"; sourceTree = "<group>"; };
+		OBJ_70 /* Promise+Always.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Always.swift"; sourceTree = "<group>"; };
+		OBJ_71 /* Promise+Any.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Any.swift"; sourceTree = "<group>"; };
+		OBJ_72 /* Promise+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Async.swift"; sourceTree = "<group>"; };
+		OBJ_73 /* Promise+Await.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Await.swift"; sourceTree = "<group>"; };
+		OBJ_74 /* Promise+Catch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Catch.swift"; sourceTree = "<group>"; };
+		OBJ_75 /* Promise+Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Delay.swift"; sourceTree = "<group>"; };
+		OBJ_76 /* Promise+Do.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Do.swift"; sourceTree = "<group>"; };
+		OBJ_77 /* Promise+Race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Race.swift"; sourceTree = "<group>"; };
+		OBJ_78 /* Promise+Recover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Recover.swift"; sourceTree = "<group>"; };
+		OBJ_79 /* Promise+Reduce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Reduce.swift"; sourceTree = "<group>"; };
+		OBJ_80 /* Promise+Retry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Retry.swift"; sourceTree = "<group>"; };
+		OBJ_81 /* Promise+Testing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Testing.swift"; sourceTree = "<group>"; };
+		OBJ_82 /* Promise+Then.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Then.swift"; sourceTree = "<group>"; };
+		OBJ_83 /* Promise+Timeout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Timeout.swift"; sourceTree = "<group>"; };
+		OBJ_84 /* Promise+Validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Validate.swift"; sourceTree = "<group>"; };
+		OBJ_85 /* Promise+Wrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Promise+Wrap.swift"; sourceTree = "<group>"; };
+		OBJ_86 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		OBJ_87 /* PromiseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseError.swift; sourceTree = "<group>"; };
+		OBJ_89 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/burt/github/ReactComponentKit/Tinydux/.build/checkouts/promises/Package.swift; sourceTree = "<group>"; };
+		OBJ_95 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_96 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		"Promises::FBLPromises::Product" /* FBLPromises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Promises::Promises::Product" /* Promises.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Promises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Tinydux::Tinydux::Product" /* Tinydux.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Tinydux.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Tinydux::TinyduxTests::Product" /* TinyduxTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = TinyduxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_32 /* Frameworks */ = {
+		OBJ_121 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				4EE416D1262087D8009F6317 /* FBLPromises in Frameworks */,
-				4EE416CF262087D8009F6317 /* Promises in Frameworks */,
-				4EE416CD262087D8009F6317 /* PromisesTestHelpers in Frameworks */,
-				4EE416D3262087D8009F6317 /* FBLPromisesTestHelpers in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_51 /* Frameworks */ = {
+		OBJ_146 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_52 /* Tinydux.framework in Frameworks */,
+				OBJ_147 /* FBLPromises.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_167 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_168 /* Promises.framework in Frameworks */,
+				OBJ_169 /* FBLPromises.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_191 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_192 /* Tinydux.framework in Frameworks */,
+				OBJ_193 /* Promises.framework in Frameworks */,
+				OBJ_194 /* FBLPromises.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4EE416F2262095B6009F6317 /* Counter */ = {
+		4ED954842739345F00B8148A /* Sleep */ = {
 			isa = PBXGroup;
 			children = (
-				4EE416F3262095C6009F6317 /* Counter.swift */,
+				4ED954822739345400B8148A /* Sleep.swift */,
 			);
-			path = Counter;
+			path = Sleep;
 			sourceTree = "<group>";
 		};
-		OBJ_13 /* Tests */ = {
+		4EECE955279281EA007A2D55 /* MockStore */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_14 /* TinyduxTests */,
+				4EECE956279281EA007A2D55 /* CounterStore.swift */,
+				4EECE95827928225007A2D55 /* UserStore.swift */,
+			);
+			name = MockStore;
+			path = Tests/MockStore;
+			sourceTree = "<group>";
+		};
+		OBJ_16 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4EECE955279281EA007A2D55 /* MockStore */,
+				OBJ_17 /* TinyduxTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_14 /* TinyduxTests */ = {
+		OBJ_17 /* TinyduxTests */ = {
 			isa = PBXGroup;
 			children = (
-				4EE416F2262095B6009F6317 /* Counter */,
-				OBJ_15 /* TinyduxTests.swift */,
-				OBJ_16 /* XCTestManifests.swift */,
+				4ED954842739345F00B8148A /* Sleep */,
+				OBJ_20 /* CounterStoreTests.swift */,
+				4EECE95A2792847A007A2D55 /* TinyduxTests.swift */,
+				4EECE95E27928A71007A2D55 /* UserStoreTests.swift */,
+				4EECE95C27928544007A2D55 /* ContextSwitching.swift */,
+				OBJ_21 /* XCTestManifests.swift */,
 			);
 			name = TinyduxTests;
 			path = Tests/TinyduxTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* Products */ = {
+		OBJ_22 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				"Tinydux::TinyduxTests::Product" /* TinyduxTests.xctest */,
-				"Tinydux::Tinydux::Product" /* Tinydux.framework */,
+				OBJ_23 /* Promises 2.0.0 */,
 			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* Promises 2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* FBLPromises */,
+				OBJ_67 /* FBLPromisesTestHelpers */,
+				OBJ_68 /* Promises */,
+				OBJ_88 /* PromisesTestHelpers */,
+				OBJ_89 /* Package.swift */,
+			);
+			name = "Promises 2.0.0";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* FBLPromises */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* FBLPromise+All.m */,
+				OBJ_26 /* FBLPromise+Always.m */,
+				OBJ_27 /* FBLPromise+Any.m */,
+				OBJ_28 /* FBLPromise+Async.m */,
+				OBJ_29 /* FBLPromise+Await.m */,
+				OBJ_30 /* FBLPromise+Catch.m */,
+				OBJ_31 /* FBLPromise+Delay.m */,
+				OBJ_32 /* FBLPromise+Do.m */,
+				OBJ_33 /* FBLPromise+Race.m */,
+				OBJ_34 /* FBLPromise+Recover.m */,
+				OBJ_35 /* FBLPromise+Reduce.m */,
+				OBJ_36 /* FBLPromise+Retry.m */,
+				OBJ_37 /* FBLPromise+Testing.m */,
+				OBJ_38 /* FBLPromise+Then.m */,
+				OBJ_39 /* FBLPromise+Timeout.m */,
+				OBJ_40 /* FBLPromise+Validate.m */,
+				OBJ_41 /* FBLPromise+Wrap.m */,
+				OBJ_42 /* FBLPromise.m */,
+				OBJ_43 /* FBLPromiseError.m */,
+				OBJ_44 /* include */,
+			);
+			name = FBLPromises;
+			path = .build/checkouts/promises/Sources/FBLPromises;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_44 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_45 /* FBLPromise+Testing.h */,
+				OBJ_46 /* FBLPromise+Reduce.h */,
+				OBJ_47 /* FBLPromise+Catch.h */,
+				OBJ_48 /* FBLPromise+Recover.h */,
+				OBJ_49 /* FBLPromise+Validate.h */,
+				OBJ_50 /* FBLPromise+All.h */,
+				OBJ_51 /* FBLPromise+Race.h */,
+				OBJ_52 /* FBLPromise+Wrap.h */,
+				OBJ_53 /* FBLPromise.h */,
+				OBJ_54 /* FBLPromises.h */,
+				OBJ_55 /* FBLPromisePrivate.h */,
+				OBJ_56 /* FBLPromise+Retry.h */,
+				OBJ_57 /* FBLPromise+Await.h */,
+				OBJ_58 /* FBLPromise+Delay.h */,
+				OBJ_59 /* FBLPromise+Do.h */,
+				OBJ_60 /* FBLPromise+Timeout.h */,
+				OBJ_61 /* FBLPromiseError.h */,
+				OBJ_62 /* FBLPromise+Then.h */,
+				OBJ_63 /* FBLPromise+Async.h */,
+				OBJ_64 /* FBLPromise+Always.h */,
+				OBJ_65 /* FBLPromise+Any.h */,
+				OBJ_66 /* module.modulemap */,
+			);
+			path = include;
+			sourceTree = "<group>";
 		};
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_13 /* Tests */,
-				OBJ_17 /* Products */,
-				OBJ_20 /* Example */,
-				OBJ_21 /* LICENSE */,
-				OBJ_22 /* README.md */,
+				OBJ_16 /* Tests */,
+				OBJ_22 /* Dependencies */,
+				OBJ_90 /* Products */,
+				OBJ_95 /* LICENSE */,
+				OBJ_96 /* README.md */,
 			);
 			sourceTree = "<group>";
+		};
+		OBJ_67 /* FBLPromisesTestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FBLPromisesTestHelpers;
+			path = .build/checkouts/promises/Sources/FBLPromisesTestHelpers;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_68 /* Promises */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_69 /* Promise+All.swift */,
+				OBJ_70 /* Promise+Always.swift */,
+				OBJ_71 /* Promise+Any.swift */,
+				OBJ_72 /* Promise+Async.swift */,
+				OBJ_73 /* Promise+Await.swift */,
+				OBJ_74 /* Promise+Catch.swift */,
+				OBJ_75 /* Promise+Delay.swift */,
+				OBJ_76 /* Promise+Do.swift */,
+				OBJ_77 /* Promise+Race.swift */,
+				OBJ_78 /* Promise+Recover.swift */,
+				OBJ_79 /* Promise+Reduce.swift */,
+				OBJ_80 /* Promise+Retry.swift */,
+				OBJ_81 /* Promise+Testing.swift */,
+				OBJ_82 /* Promise+Then.swift */,
+				OBJ_83 /* Promise+Timeout.swift */,
+				OBJ_84 /* Promise+Validate.swift */,
+				OBJ_85 /* Promise+Wrap.swift */,
+				OBJ_86 /* Promise.swift */,
+				OBJ_87 /* PromiseError.swift */,
+			);
+			name = Promises;
+			path = .build/checkouts/promises/Sources/Promises;
+			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
@@ -158,26 +429,88 @@
 		OBJ_8 /* Tinydux */ = {
 			isa = PBXGroup;
 			children = (
-				4EE416E826209286009F6317 /* Action.swift */,
-				OBJ_9 /* Async.swift */,
-				OBJ_10 /* Job.swift */,
-				4EE416F92620A122009F6317 /* StoreError.swift */,
-				OBJ_11 /* State.swift */,
-				OBJ_12 /* Store.swift */,
-				4E7286742621BFA900298CDF /* Context.swift */,
+				OBJ_13 /* State.swift */,
+				OBJ_14 /* Store.swift */,
+				4ED9548527394DE800B8148A /* PromiseExtensions.swift */,
 			);
 			name = Tinydux;
 			path = Sources/Tinydux;
 			sourceTree = SOURCE_ROOT;
 		};
+		OBJ_88 /* PromisesTestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PromisesTestHelpers;
+			path = .build/checkouts/promises/Sources/PromisesTestHelpers;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Promises::FBLPromises::Product" /* FBLPromises.framework */,
+				"Promises::Promises::Product" /* Promises.framework */,
+				"Tinydux::Tinydux::Product" /* Tinydux.framework */,
+				"Tinydux::TinyduxTests::Product" /* TinyduxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		"Promises::FBLPromises" /* FBLPromises */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_98 /* Build configuration list for PBXNativeTarget "FBLPromises" */;
+			buildPhases = (
+				OBJ_101 /* Sources */,
+				OBJ_121 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FBLPromises;
+			productName = FBLPromises;
+			productReference = "Promises::FBLPromises::Product" /* FBLPromises.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Promises::Promises" /* Promises */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_123 /* Build configuration list for PBXNativeTarget "Promises" */;
+			buildPhases = (
+				OBJ_126 /* Sources */,
+				OBJ_146 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_148 /* PBXTargetDependency */,
+			);
+			name = Promises;
+			productName = Promises;
+			productReference = "Promises::Promises::Product" /* Promises.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Promises::SwiftPMPackageDescription" /* PromisesPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_150 /* Build configuration list for PBXNativeTarget "PromisesPackageDescription" */;
+			buildPhases = (
+				OBJ_153 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PromisesPackageDescription;
+			productName = PromisesPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
 		"Tinydux::SwiftPMPackageDescription" /* TinyduxPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_34 /* Build configuration list for PBXNativeTarget "TinyduxPackageDescription" */;
+			buildConfigurationList = OBJ_173 /* Build configuration list for PBXNativeTarget "TinyduxPackageDescription" */;
 			buildPhases = (
-				OBJ_37 /* Sources */,
+				OBJ_176 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -189,37 +522,35 @@
 		};
 		"Tinydux::Tinydux" /* Tinydux */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_24 /* Build configuration list for PBXNativeTarget "Tinydux" */;
+			buildConfigurationList = OBJ_156 /* Build configuration list for PBXNativeTarget "Tinydux" */;
 			buildPhases = (
-				OBJ_27 /* Sources */,
-				OBJ_32 /* Frameworks */,
+				OBJ_159 /* Sources */,
+				OBJ_167 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				OBJ_170 /* PBXTargetDependency */,
+				OBJ_171 /* PBXTargetDependency */,
 			);
 			name = Tinydux;
-			packageProductDependencies = (
-				4EE416CC262087D8009F6317 /* PromisesTestHelpers */,
-				4EE416CE262087D8009F6317 /* Promises */,
-				4EE416D0262087D8009F6317 /* FBLPromises */,
-				4EE416D2262087D8009F6317 /* FBLPromisesTestHelpers */,
-			);
 			productName = Tinydux;
 			productReference = "Tinydux::Tinydux::Product" /* Tinydux.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		"Tinydux::TinyduxTests" /* TinyduxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_45 /* Build configuration list for PBXNativeTarget "TinyduxTests" */;
+			buildConfigurationList = OBJ_184 /* Build configuration list for PBXNativeTarget "TinyduxTests" */;
 			buildPhases = (
-				OBJ_48 /* Sources */,
-				OBJ_51 /* Frameworks */,
+				OBJ_187 /* Sources */,
+				OBJ_191 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_53 /* PBXTargetDependency */,
+				OBJ_195 /* PBXTargetDependency */,
+				OBJ_196 /* PBXTargetDependency */,
+				OBJ_197 /* PBXTargetDependency */,
 			);
 			name = TinyduxTests;
 			productName = TinyduxTests;
@@ -243,13 +574,13 @@
 				en,
 			);
 			mainGroup = OBJ_5;
-			packageReferences = (
-				4EE416CB262087D8009F6317 /* XCRemoteSwiftPackageReference "promises" */,
-			);
-			productRefGroup = OBJ_17 /* Products */;
+			productRefGroup = OBJ_90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				"Promises::FBLPromises" /* FBLPromises */,
+				"Promises::Promises" /* Promises */,
+				"Promises::SwiftPMPackageDescription" /* PromisesPackageDescription */,
 				"Tinydux::Tinydux" /* Tinydux */,
 				"Tinydux::SwiftPMPackageDescription" /* TinyduxPackageDescription */,
 				"Tinydux::TinyduxPackageTests::ProductTarget" /* TinyduxPackageTests */,
@@ -259,115 +590,395 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_27 /* Sources */ = {
+		OBJ_101 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				4EE416FA2620A122009F6317 /* StoreError.swift in Sources */,
-				OBJ_28 /* Async.swift in Sources */,
-				OBJ_29 /* Job.swift in Sources */,
-				4EE416F4262095C6009F6317 /* Counter.swift in Sources */,
-				OBJ_30 /* State.swift in Sources */,
-				4E7286752621BFA900298CDF /* Context.swift in Sources */,
-				4EE416E926209286009F6317 /* Action.swift in Sources */,
-				OBJ_31 /* Store.swift in Sources */,
+				OBJ_102 /* FBLPromise+All.m in Sources */,
+				OBJ_103 /* FBLPromise+Always.m in Sources */,
+				OBJ_104 /* FBLPromise+Any.m in Sources */,
+				OBJ_105 /* FBLPromise+Async.m in Sources */,
+				OBJ_106 /* FBLPromise+Await.m in Sources */,
+				OBJ_107 /* FBLPromise+Catch.m in Sources */,
+				OBJ_108 /* FBLPromise+Delay.m in Sources */,
+				OBJ_109 /* FBLPromise+Do.m in Sources */,
+				OBJ_110 /* FBLPromise+Race.m in Sources */,
+				OBJ_111 /* FBLPromise+Recover.m in Sources */,
+				OBJ_112 /* FBLPromise+Reduce.m in Sources */,
+				OBJ_113 /* FBLPromise+Retry.m in Sources */,
+				OBJ_114 /* FBLPromise+Testing.m in Sources */,
+				OBJ_115 /* FBLPromise+Then.m in Sources */,
+				OBJ_116 /* FBLPromise+Timeout.m in Sources */,
+				OBJ_117 /* FBLPromise+Validate.m in Sources */,
+				OBJ_118 /* FBLPromise+Wrap.m in Sources */,
+				OBJ_119 /* FBLPromise.m in Sources */,
+				OBJ_120 /* FBLPromiseError.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_37 /* Sources */ = {
+		OBJ_126 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_38 /* Package.swift in Sources */,
+				OBJ_127 /* Promise+All.swift in Sources */,
+				OBJ_128 /* Promise+Always.swift in Sources */,
+				OBJ_129 /* Promise+Any.swift in Sources */,
+				OBJ_130 /* Promise+Async.swift in Sources */,
+				OBJ_131 /* Promise+Await.swift in Sources */,
+				OBJ_132 /* Promise+Catch.swift in Sources */,
+				OBJ_133 /* Promise+Delay.swift in Sources */,
+				OBJ_134 /* Promise+Do.swift in Sources */,
+				OBJ_135 /* Promise+Race.swift in Sources */,
+				OBJ_136 /* Promise+Recover.swift in Sources */,
+				OBJ_137 /* Promise+Reduce.swift in Sources */,
+				OBJ_138 /* Promise+Retry.swift in Sources */,
+				OBJ_139 /* Promise+Testing.swift in Sources */,
+				OBJ_140 /* Promise+Then.swift in Sources */,
+				OBJ_141 /* Promise+Timeout.swift in Sources */,
+				OBJ_142 /* Promise+Validate.swift in Sources */,
+				OBJ_143 /* Promise+Wrap.swift in Sources */,
+				OBJ_144 /* Promise.swift in Sources */,
+				OBJ_145 /* PromiseError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_48 /* Sources */ = {
+		OBJ_153 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_49 /* TinyduxTests.swift in Sources */,
-				OBJ_50 /* XCTestManifests.swift in Sources */,
+				OBJ_154 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_164 /* State.swift in Sources */,
+				OBJ_165 /* Store.swift in Sources */,
+				4ED9548627394DE800B8148A /* PromiseExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_176 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_177 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_187 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_189 /* CounterStoreTests.swift in Sources */,
+				4EECE95927928225007A2D55 /* UserStore.swift in Sources */,
+				OBJ_190 /* XCTestManifests.swift in Sources */,
+				4EECE95B2792847A007A2D55 /* TinyduxTests.swift in Sources */,
+				4EECE95D27928544007A2D55 /* ContextSwitching.swift in Sources */,
+				4EECE957279281F5007A2D55 /* CounterStore.swift in Sources */,
+				4EECE95F27928A71007A2D55 /* UserStoreTests.swift in Sources */,
+				4ED954832739345400B8148A /* Sleep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_43 /* PBXTargetDependency */ = {
+		OBJ_148 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Promises::FBLPromises" /* FBLPromises */;
+			targetProxy = 4ED9547C27392F7900B8148A /* PBXContainerItemProxy */;
+		};
+		OBJ_170 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Promises::Promises" /* Promises */;
+			targetProxy = 4ED9547B27392F7900B8148A /* PBXContainerItemProxy */;
+		};
+		OBJ_171 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Promises::FBLPromises" /* FBLPromises */;
+			targetProxy = 4ED9547D27392F7900B8148A /* PBXContainerItemProxy */;
+		};
+		OBJ_182 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tinydux::TinyduxTests" /* TinyduxTests */;
-			targetProxy = 4EE416BF262086BB009F6317 /* PBXContainerItemProxy */;
+			targetProxy = 4ED9548127392F7900B8148A /* PBXContainerItemProxy */;
 		};
-		OBJ_53 /* PBXTargetDependency */ = {
+		OBJ_195 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tinydux::Tinydux" /* Tinydux */;
-			targetProxy = 4EE416BC262086BB009F6317 /* PBXContainerItemProxy */;
+			targetProxy = 4ED9547E27392F7900B8148A /* PBXContainerItemProxy */;
+		};
+		OBJ_196 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Promises::Promises" /* Promises */;
+			targetProxy = 4ED9547F27392F7900B8148A /* PBXContainerItemProxy */;
+		};
+		OBJ_197 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Promises::FBLPromises" /* FBLPromises */;
+			targetProxy = 4ED9548027392F7900B8148A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_25 /* Debug */ = {
+		OBJ_100 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Tinydux.xcodeproj/Tinydux_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+					"$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				INFOPLIST_FILE = Tinydux.xcodeproj/FBLPromises_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = FBLPromises;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				TARGET_NAME = FBLPromises;
+			};
+			name = Release;
+		};
+		OBJ_124 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include",
+				);
+				INFOPLIST_FILE = Tinydux.xcodeproj/Promises_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Promises;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Promises;
+			};
+			name = Debug;
+		};
+		OBJ_125 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include",
+				);
+				INFOPLIST_FILE = Tinydux.xcodeproj/Promises_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap";
+				PRODUCT_BUNDLE_IDENTIFIER = Promises;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Promises;
+			};
+			name = Release;
+		};
+		OBJ_151 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -package-description-version 4.2.0";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -package-description-version 4.2.0";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include",
+				);
+				INFOPLIST_FILE = Tinydux.xcodeproj/Tinydux_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = Tinydux;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = Tinydux;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
-		OBJ_26 /* Release */ = {
+		OBJ_158 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include",
+				);
 				INFOPLIST_FILE = Tinydux.xcodeproj/Tinydux_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = Tinydux;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TARGET_NAME = Tinydux;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		OBJ_174 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_175 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/ManifestAPI -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.0.sdk -package-description-version 5.3.0";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_180 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_185 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include",
+				);
+				INFOPLIST_FILE = Tinydux.xcodeproj/TinyduxTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TinyduxTests;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		OBJ_186 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DRIVERKIT_DEPLOYMENT_TARGET = 19.0;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include",
+				);
+				INFOPLIST_FILE = Tinydux.xcodeproj/TinyduxTests_Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited) -Xcc -fmodule-map-file=$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include/module.modulemap";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = TinyduxTests;
+				TVOS_DEPLOYMENT_TARGET = 14.0;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
 			};
 			name = Release;
 		};
@@ -386,35 +997,18 @@
 					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE DEBUG";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				USE_HEADERMAP = NO;
 			};
 			name = Debug;
-		};
-		OBJ_35 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		OBJ_36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				LD = /usr/bin/true;
-				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk -package-description-version 5.3.0";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
 		};
 		OBJ_4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -429,91 +1023,103 @@
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
-				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SUPPORTED_PLATFORMS = "$(AVAILABLE_PLATFORMS)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
-		OBJ_41 /* Debug */ = {
+		OBJ_99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_42 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Release;
-		};
-		OBJ_46 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = NO;
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Tinydux.xcodeproj/TinyduxTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
-					"@loader_path/../Frameworks",
-					"@loader_path/Frameworks",
+					"$(SRCROOT)/.build/checkouts/promises/Sources/FBLPromises/include",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				INFOPLIST_FILE = Tinydux.xcodeproj/FBLPromises_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = FBLPromises;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = TinyduxTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				TARGET_NAME = FBLPromises;
 			};
 			name = Debug;
-		};
-		OBJ_47 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
-				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = Tinydux.xcodeproj/TinyduxTests_Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@loader_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				OTHER_CFLAGS = "$(inherited)";
-				OTHER_LDFLAGS = "$(inherited)";
-				OTHER_SWIFT_FLAGS = "$(inherited)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
-				SWIFT_VERSION = 5.0;
-				TARGET_NAME = TinyduxTests;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		OBJ_123 /* Build configuration list for PBXNativeTarget "Promises" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_124 /* Debug */,
+				OBJ_125 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_150 /* Build configuration list for PBXNativeTarget "PromisesPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_151 /* Debug */,
+				OBJ_152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_156 /* Build configuration list for PBXNativeTarget "Tinydux" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_157 /* Debug */,
+				OBJ_158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_173 /* Build configuration list for PBXNativeTarget "TinyduxPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_174 /* Debug */,
+				OBJ_175 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_179 /* Build configuration list for PBXAggregateTarget "TinyduxPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_180 /* Debug */,
+				OBJ_181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_184 /* Build configuration list for PBXNativeTarget "TinyduxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_185 /* Debug */,
+				OBJ_186 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_2 /* Build configuration list for PBXProject "Tinydux" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -523,77 +1129,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_24 /* Build configuration list for PBXNativeTarget "Tinydux" */ = {
+		OBJ_98 /* Build configuration list for PBXNativeTarget "FBLPromises" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_25 /* Debug */,
-				OBJ_26 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_34 /* Build configuration list for PBXNativeTarget "TinyduxPackageDescription" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_35 /* Debug */,
-				OBJ_36 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_40 /* Build configuration list for PBXAggregateTarget "TinyduxPackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_41 /* Debug */,
-				OBJ_42 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_45 /* Build configuration list for PBXNativeTarget "TinyduxTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_46 /* Debug */,
-				OBJ_47 /* Release */,
+				OBJ_99 /* Debug */,
+				OBJ_100 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		4EE416CB262087D8009F6317 /* XCRemoteSwiftPackageReference "promises" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/promises.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.12;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		4EE416CC262087D8009F6317 /* PromisesTestHelpers */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4EE416CB262087D8009F6317 /* XCRemoteSwiftPackageReference "promises" */;
-			productName = PromisesTestHelpers;
-		};
-		4EE416CE262087D8009F6317 /* Promises */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4EE416CB262087D8009F6317 /* XCRemoteSwiftPackageReference "promises" */;
-			productName = Promises;
-		};
-		4EE416D0262087D8009F6317 /* FBLPromises */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4EE416CB262087D8009F6317 /* XCRemoteSwiftPackageReference "promises" */;
-			productName = FBLPromises;
-		};
-		4EE416D2262087D8009F6317 /* FBLPromisesTestHelpers */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4EE416CB262087D8009F6317 /* XCRemoteSwiftPackageReference "promises" */;
-			productName = FBLPromisesTestHelpers;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
